@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #005F5F;
+  --color-primary-dark: #004A4A;
+  --color-brand-teal: #005F5F;
+  --color-surface: #121212;
+  --color-surface-container: #1e1e1e;
+  --color-surface-container-low: #1a1a1a;
+  --color-surface-variant: #2a2a2a;
+  --color-on-surface: #FFFFFF;
+  --color-on-surface-variant: #c0ced6;
+}
+
+:root {
+  --background: #121212;
+  --foreground: #ffffff;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+/* Typography styles to match landing page */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Epilogue', sans-serif;
+}
+
+body, p, span, div {
+  font-family: 'Manrope', sans-serif;
+}
+
+/* Glassmorphism Classes */
+.glass {
+  background: rgba(30, 30, 30, 0.6);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-card {
+  background: rgba(30, 30, 30, 0.4);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  background: rgba(40, 40, 40, 0.5);
+  border-color: rgba(0, 95, 95, 0.3);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #005F5F;
+}
+
+/* Utility Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
