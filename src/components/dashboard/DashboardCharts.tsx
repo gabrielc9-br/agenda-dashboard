@@ -29,11 +29,11 @@ export function RevenueChart() {
           </defs>
           <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#2a2a2a" />
           <XAxis dataKey="name" stroke="#c0ced6" fontSize={12} tickLine={false} axisLine={false} />
-          <YAxis stroke="#c0ced6" fontSize={12} tickLine={false} axisLine={false} tickFormatter={(value) => \`R$ \${value}\`} />
+          <YAxis stroke="#c0ced6" fontSize={12} tickLine={false} axisLine={false} tickFormatter={(value) => `R$ ${value}`} />
           <Tooltip 
             contentStyle={{ backgroundColor: '#1e1e1e', borderColor: '#2a2a2a', borderRadius: '8px', color: '#fff' }}
             itemStyle={{ color: '#005F5F', fontWeight: 'bold' }}
-            formatter={(value) => [\`R$ \${value}\`, 'Faturamento']}
+            formatter={(value) => [`R$ ${value}`, 'Faturamento']}
           />
           <Area type="monotone" dataKey="faturamento" stroke="#005F5F" strokeWidth={3} fillOpacity={1} fill="url(#colorFaturamento)" />
         </AreaChart>

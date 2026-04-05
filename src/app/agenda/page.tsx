@@ -275,12 +275,12 @@ export default function AgendaPage() {
       )}
 
       {/* Basic Keyframe for slide from right */}
-      <style dangerouslySetInnerHTML={{__html: \`
+      <style dangerouslySetInnerHTML={{__html: `
         @keyframes slideInRight {
           from { transform: translateX(100%); }
           to { transform: translateX(0); }
         }
-      \`}} />
+      `}} />
     </div>
   );
 }
